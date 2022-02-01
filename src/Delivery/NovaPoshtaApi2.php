@@ -374,10 +374,11 @@ class NovaPoshtaApi2
      * Get tracking information by track number.
      *
      * @param string $track Track number
+     * @param bool $phone
      *
      * @return mixed
      */
-    public function documentsTracking($track)
+    public function documentsTracking($track, $phone = false)
     {
         $params = array('Documents' => array(array('DocumentNumber' => $track)));
 
