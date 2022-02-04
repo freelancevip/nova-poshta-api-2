@@ -380,7 +380,7 @@ class NovaPoshtaApi2
      */
     public function documentsTracking($track, $phone = false)
     {
-        $params = array('Documents' => array(array('DocumentNumber' => $track)));
+        $params = array('Documents' => array(array('DocumentNumber' => $track, 'Phone' => $phone)));
 
         return $this->request('TrackingDocument', 'getStatusDocuments', $params);
     }
